@@ -47,73 +47,70 @@
             justify-content: center;
             margin-top: 10px;
         }
+
+        /* Flower animation */
+        .flower {
+            position: fixed;
+            z-index: 1000;
+            top: -50px;
+            pointer-events: none;
+            user-select: none;
+        }
     </style>
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen px-4">
-    <div class="text-center mb-10">
-        <h1 class="text-3xl md:text-4xl font-bold mb-4">Happy Birthday, Anu!🎂</h1>
-        <div id="countdown" class="text-2xl font-semibold mb-6"></div>
+<body class="flex flex-col items-center justify-start min-h-screen px-4 py-6">
+
+    <!-- Header and Countdown -->
+    <div class="text-center mb-6">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Happy Birthday, Anu! 🎂</h1>
+        <div id="countdown" class="text-2xl md:text-3xl font-semibold mb-4"></div>
     </div>
 
-    <button id="heartButton" class="heart-button bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 transition">❤️ Press It!</button>
+    <!-- Heart Button -->
+    <button id="heartButton" class="heart-button bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 transition mb-6">❤️ Press It!</button>
 
-    <section id="love-letter" class="mb-10">
+    <!-- Love Letter -->
+    <section id="love-letter" class="mb-10 w-full max-w-3xl text-center">
         <h2 class="text-2xl md:text-3xl font-semibold mb-4">A Love Letter ❤️</h2>
-        <center>
         <p class="text-base md:text-lg mb-4">My happiness, My Anu🎉</p>
-        </center>
-       
-        <div class="mt-4">  
-            <p class="text-base md:text-lg mb-4">खुली झुल्फ़ों में आज़ाद देखी है<br>
+        <p class="text-base md:text-lg">
+            खुली झुल्फ़ों में आज़ाद देखी है<br>
             मैंने जी ते जी कयामत देखी है<br>
             ये दिल अब और क्या देखे, जब<br>
             उसकी हर एक शरारत देखी है<br>
             वो रो पड़ती है मेरी इसी हालत पे<br>
             मैंने खुद की और बुरी हालत देखी है<br>
             हर कहीं बस बेचैनी ही मिली मुझे<br>
-            सिर्फ उसकी बाहों में राहत देखी है</p>  
-        </div>  
+            सिर्फ उसकी बाहों में राहत देखी है
+        </p>
     </section>
 
-  <section id="photo-gallery" class="mb-10 w-full max-w-5xl mx-auto">
-    <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-center">Our Favorite Moments 📸</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        <div>
-            <img src="pic1.jpg" alt="Moment 1" class="gallery h-48 w-full object-contain rounded border"/>
-            <p class="text-sm mt-2 text-center">Loved it!</p>
-        </div>
-        <div>
-            <img src="pic2.jpg" alt="Moment 2" class="gallery h-48 w-full object-contain rounded border"/>
-            <p class="text-sm mt-2 text-center">Best Pic</p>
-        </div>
-        <div>
-            <img src="pic3.jpg" alt="Moment 3" class="gallery h-48 w-full object-contain rounded border"/>
-            <p class="text-sm mt-2 text-center">Lovely Image</p>
-        </div>
-        <div>
-            <img src="pic4.jpg" alt="Moment 4" class="gallery h-48 w-full object-contain rounded border"/>
-            <p class="text-sm mt-2 text-center">Marvelous Pic</p>
-        </div>
-    </div>
-</section>
-
-
-    <section id="video-messages" class="mb-10">
-        <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-center">A Special Video Message 🎥</h2>
-        <div class="video-message mb-4 mx-auto">
-            <video controls id="videoMessage" class="w-full rounded">
-                <source src="video1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p class="text-sm mt-2 text-center">A message for your special day!</p>
+    <!-- Photo Gallery -->
+    <section id="photo-gallery" class="mb-10 w-full max-w-5xl">
+        <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-center">Our Favorite Moments 📸</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div><img src="pic1.jpg" alt="Moment 1" class="gallery h-48 w-full object-contain rounded border"/><p class="text-sm mt-2 text-center">Loved it!</p></div>
+            <div><img src="pic2.jpg" alt="Moment 2" class="gallery h-48 w-full object-contain rounded border"/><p class="text-sm mt-2 text-center">Best Pic</p></div>
+            <div><img src="pic3.jpg" alt="Moment 3" class="gallery h-48 w-full object-contain rounded border"/><p class="text-sm mt-2 text-center">Lovely Image</p></div>
+            <div><img src="pic4.jpg" alt="Moment 4" class="gallery h-48 w-full object-contain rounded border"/><p class="text-sm mt-2 text-center">Marvelous Pic</p></div>
         </div>
     </section>
 
-    <!-- New Interactive Fun Section -->
-    <section id="fun-facts" class="mb-10">
-        <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-center">Fun Fact About Saurabh 🎉</h2>
-        <p class="text-base md:text-lg mb-4 text-center">Anu, do you know what Saurabh is? 😏</p>
-        <ul class="text-center list-disc list-inside text-base md:text-lg">
+    <!-- Video Message -->
+    <section id="video-messages" class="mb-10 w-full max-w-3xl text-center">
+        <h2 class="text-2xl md:text-3xl font-semibold mb-4">A Special Video Message 🎥</h2>
+        <video controls id="videoMessage" class="w-full rounded mb-2">
+            <source src="video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="text-sm">A message for your special day!</p>
+    </section>
+
+    <!-- Fun Facts -->
+    <section id="fun-facts" class="mb-10 w-full max-w-3xl text-center">
+        <h2 class="text-2xl md:text-3xl font-semibold mb-4">Fun Fact About Saurabh 🎉</h2>
+        <p class="text-base md:text-lg mb-4">Anu, do you know what Saurabh is? 😏</p>
+        <ul class="list-disc list-inside text-base md:text-lg">
             <li>💖 Your biggest fan</li>
             <li>🎶 A lover of surprises</li>
             <li>🎁 Your happiness seeker</li>
@@ -121,66 +118,88 @@
         </ul>
     </section>
 
-    <section id="birthday-wishes" class="mb-10">
-        <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-center">Birthday Wishes Wall 📝</h2>
+    <!-- Birthday Wishes -->
+    <section id="birthday-wishes" class="mb-10 w-full max-w-3xl text-center">
+        <h2 class="text-2xl md:text-3xl font-semibold mb-4">Birthday Wishes Wall 📝</h2>
         <textarea placeholder="Leave your birthday wish here!" class="w-full h-24 mb-4 p-2 rounded"></textarea>
-        <center>
         <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">Submit Wish</button>
-        </center>
     </section>
 
+    <!-- Audio -->
     <audio id="birthdaySong" src="song1.mp3" autoplay preload="auto"></audio>
     <audio id="surpriseSong" src="tum-hi-ho-aashiqui-2-musiclinda-com-1074.mp3" preload="auto"></audio>
     <audio id="mySong" src="mysong.mp3" preload="auto"></audio>
 
-    <button id="surpriseButton" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">Surprise for You!</button>
+    <!-- Surprise Section -->
+    <button id="surpriseButton" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition mb-6">Surprise for You!</button>
     <div class="surprise-image" id="surpriseImage">
         <img src="pic5.jpg" alt="Surprise Image"/>
-        <p class="text-lg mt-2 text-center">You are the best gift in my life! 🎁</p>
-        <p class="text-lg text-center">May your day be filled with joy and love! ❤️</p>
+        <p class="text-lg mt-2">You are the best gift in my life! 🎁</p>
+        <p class="text-lg">May your day be filled with joy and love! ❤️</p>
     </div>
 
     <script>
-        // Countdown Timer
-        const countdownDate = new Date("Sep 22, 2024 00:00:00").getTime();
+        // Countdown Timer for Sep 22, 2025
+        const countdownDate = new Date("Sep 22, 2025 00:00:00").getTime();
         const countdownElement = document.getElementById("countdown");
 
         const updateCountdown = () => {
             const now = new Date().getTime();
             const distance = countdownDate - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-            if (distance < 0) {
+            if(distance > 0){
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            } else {
                 clearInterval(timerInterval);
-                countdownElement.innerHTML = "It's your birthday! 🎉";
+                countdownElement.innerHTML = "Happy Birthday Baby! 🎉";
+                createFlowerSparkle();
             }
-        };
+        }
 
         const timerInterval = setInterval(updateCountdown, 1000);
 
-        // Function to stop all audio
+        // Flower sparkle animation
+        function createFlowerSparkle(){
+            for(let i=0;i<50;i++){
+                const flower = document.createElement("div");
+                flower.className = "flower";
+                flower.innerHTML = "🌸";
+                flower.style.fontSize = (15 + Math.random()*30) + "px";
+                flower.style.left = Math.random() * window.innerWidth + "px";
+                flower.style.opacity = Math.random();
+                document.body.appendChild(flower);
+
+                setTimeout(()=>{
+                    flower.style.top = window.innerHeight + "px";
+                    flower.style.opacity = 0;
+                }, 100);
+
+                setTimeout(()=>{flower.remove()}, 3100);
+            }
+            setInterval(createFlowerSparkle,4000);
+        }
+
+        // Stop all audio
         const stopAllAudio = () => {
             document.getElementById("birthdaySong").pause();
             document.getElementById("surpriseSong").pause();
             document.getElementById("mySong").pause();
-            document.getElementById("videoMessage").pause(); // Stop video if playing
+            document.getElementById("videoMessage").pause();
         };
 
-        // Surprise Button Functionality
-        document.getElementById("surpriseButton").addEventListener("click", function() {
+        // Surprise Button
+        document.getElementById("surpriseButton").addEventListener("click", function(){
             stopAllAudio();
             document.getElementById("surpriseSong").play();
             document.getElementById("surpriseImage").style.display = "block";
         });
 
-        // Heart Button Functionality
-        document.getElementById("heartButton").addEventListener("click", function() {
+        // Heart Button
+        document.getElementById("heartButton").addEventListener("click", function(){
             stopAllAudio();
             document.getElementById("mySong").play();
         });
